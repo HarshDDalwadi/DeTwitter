@@ -1,0 +1,42 @@
+{
+  "name": "tweether",
+  "version": "1.0.0",
+  "description": "A decentralized Twitter clone built on Ethereum using Truffle and Ganache.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "fund-metamask": "truffle exec ./fund-metamask.js",
+    "dev": "truffle migrate --reset && npm run artifacts && next client",
+    "artifacts": "cp -r ./build/contracts/ ./client/web3/artifacts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phrazzld/tweether.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phrazzld/tweether/issues"
+  },
+  "homepage": "https://github.com/phrazzld/tweether#readme",
+  "dependencies": {
+    "gravatar-url": "^3.1.0",
+    "moment": "^2.29.1",
+    "next": "^10.0.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-moment": "^1.1.1",
+    "truffle-contract": "^4.0.31",
+    "web3": "^1.3.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-transform-runtime": "^7.13.9",
+    "@babel/preset-env": "^7.13.9",
+    "babel-plugin-inline-react-svg": "^2.0.1"
+  }
+}
